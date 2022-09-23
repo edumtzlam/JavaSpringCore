@@ -1,19 +1,19 @@
 package com.mdf.ioc;
 
-public class Director implements IEmpleado {
+public class Jefe implements IEmpleado {
 
 	private ICreacionInforme informeNuevo;
-	
-	public Director(ICreacionInforme informeNuevo) {
-		super();
+
+	public void setInformeNuevo(ICreacionInforme informeNuevo) {
 		this.informeNuevo = informeNuevo;
 	}
 
 	public String GetTareas() {
-		return "Dirigir la empresa.";
+		return "Gestionar la agenda de los jefes.";
 	}
-	
+
 	public String getInforme() {
 		return this.informeNuevo.getInforme();
 	}
+
 }
