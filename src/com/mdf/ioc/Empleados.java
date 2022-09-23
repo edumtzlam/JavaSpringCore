@@ -8,7 +8,7 @@ public class Empleados {
 		ClassPathXmlApplicationContext objCtx = new ClassPathXmlApplicationContext("application.context.xml");
 		IEmpleado objDirector = objCtx.getBean("Director",IEmpleado.class);
 		IEmpleado objSecretario = objCtx.getBean("Secretario",IEmpleado.class);
-		System.out.println(objDirector.GetTareas());
+		System.out.println(objDirector.getInforme());
 		System.out.println(objSecretario.GetTareas());
 		objCtx.close();		
 	}
