@@ -1,11 +1,18 @@
 package com.mdf.ioc;
 
 public class Secretario implements IEmpleado {
+
+	private ICreacionInforme informeNuevo;
+
+	public void setInformeNuevo(ICreacionInforme informeNuevo) {
+		this.informeNuevo = informeNuevo;
+	}
+
 	public String GetTareas() {
 		return "Gestionar la agenda de los jefes.";
 	}
 
 	public String getInforme() {
-		return null;
+		return this.informeNuevo.getInforme();
 	}
 }
